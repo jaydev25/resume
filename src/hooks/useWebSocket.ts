@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 
 const WS_URL = process.env.NODE_ENV === 'production'
   ? 'wss://your-websocket-server.com' // You'll need to update this with your WebSocket server URL
