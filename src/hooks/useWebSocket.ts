@@ -1,17 +1,14 @@
 import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 
+const WS_URL = process.env.NODE_ENV === 'production'
+  ? 'wss://your-websocket-server.com' // You'll need to update this with your WebSocket server URL
+  : 'ws://localhost:3001';
+
 interface WebSocketMessage {
   type: 'message' | 'connection' | 'ping' | 'pong';
   data?: string;
   status?: string;
 }
-
-// Create WebSocket URL outside of the hook to prevent recreation
-const getWebSocketUrl = () => {
-  const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-  const host = process.env.NODE_ENV === 'development' ? 'localhost:3001' : window.location.host;
-  return `${protocol}//${host}`;
-};
 
 export const useWebSocket = () => {
   const [isConnected, setIsConnected] = useState(false);
@@ -21,9 +18,6 @@ export const useWebSocket = () => {
   const pingIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const pingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const shouldAttemptReconnect = useRef(true);
-
-  // Memoize the WebSocket URL
-  const wsUrl = useMemo(getWebSocketUrl, []);
 
   const cleanup = useCallback(() => {
     shouldAttemptReconnect.current = false;
@@ -62,10 +56,10 @@ export const useWebSocket = () => {
     if (!shouldAttemptReconnect.current) return;
     if (wsRef.current?.readyState === WebSocket.OPEN) return;
 
-    console.log('Connecting to WebSocket:', wsUrl);
+    console.log('Connecting to WebSocket:', WS_URL);
     
     try {
-      wsRef.current = new WebSocket(wsUrl);
+      wsRef.current = new WebSocket(WS_URL);
 
       wsRef.current.onopen = () => {
         setIsConnected(true);
@@ -130,7 +124,7 @@ export const useWebSocket = () => {
       console.error('Error creating WebSocket:', error);
       setIsConnected(false);
     }
-  }, [wsUrl, heartbeat]);
+  }, [heartbeat]);
 
   const sendMessage = useCallback((message: string) => {
     if (wsRef.current?.readyState === WebSocket.OPEN) {
