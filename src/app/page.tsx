@@ -2,7 +2,7 @@
 
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaMapMarkerAlt, FaDownload } from 'react-icons/fa';
 import ThemeToggle from '@/components/ThemeToggle';
-import ViewerCount from '@/components/ViewerCount';
+// import ViewerCount from '@/components/ViewerCount';
 
 const skillCategories = {
   "Frontend Development": [
