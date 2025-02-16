@@ -63,20 +63,12 @@ const skillCategories = {
 
 export default function Home() {
   const downloadPDF = () => {
-    // Import html2pdf dynamically to avoid SSR issues
-    import('html2pdf.js').then(module => {
-      const element = document.getElementById('resume-content');
-      if (!element) return;
-      
-      const opt = {
-        margin: 1,
-        filename: 'jaydev-thomke-resume.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-      };
-      module.default(element, opt);
-    });
+    const link = document.createElement('a');
+    link.href = '/resume_pdf.pdf';
+    link.download = 'jaydev-thomke-resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -157,25 +149,23 @@ export default function Home() {
             </section>
 
             {/* Skills Section */}
-            <section className="mb-8">
-              <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4 border-b-2 border-blue-600 pb-2">Skills</h3>
-              <div className="space-y-6">
-                {Object.entries(skillCategories).map(([category, skills]) => (
-                  <div key={category} className="space-y-2">
-                    <h4 className="text-lg font-semibold text-gray-700 dark:text-gray-300">{category}</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {skills.map((skill, index) => (
-                        <span
-                          key={index}
-                          className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm transition-colors"
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
+            <section className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4 border-b-2 border-blue-600 pb-2 col-span-1 md:col-span-2">Skills</h3>
+              {Object.entries(skillCategories).map(([category, skills]) => (
+                <div key={category} className="space-y-2">
+                  <h4 className="text-lg font-semibold text-gray-700 dark:text-gray-300">{category}</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {skills.map((skill, subIndex) => (
+                      <span
+                        key={subIndex}
+                        className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm transition-colors"
+                      >
+                        {skill}
+                      </span>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </section>
 
             {/* Work Experience Section */}

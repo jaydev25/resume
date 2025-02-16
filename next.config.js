@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/resume',
+  basePath: '',
   images: {
     unoptimized: true,
   },
 }
+
+module.exports = nextConfig
