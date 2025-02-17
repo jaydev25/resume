@@ -64,7 +64,7 @@ const skillCategories = {
 export default function Home() {
   const downloadPDF = () => {
     const link = document.createElement('a');
-    link.href = '/resume_pdf.pdf';
+    link.href = '/resume/resume_pdf.pdf';
     link.download = 'jaydev-thomke-resume.pdf';
     document.body.appendChild(link);
     link.click();
