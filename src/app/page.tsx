@@ -2,7 +2,7 @@
 
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaMapMarkerAlt, FaDownload } from 'react-icons/fa';
 import ThemeToggle from '@/components/ThemeToggle';
-// import ViewerCount from '@/components/ViewerCount';
+import ViewerCount from '@/components/ViewerCount';
 
 const skillCategories = {
   "Frontend Development": [
@@ -77,7 +77,7 @@ export default function Home() {
       <div className="fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 shadow-md z-50 transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center">
-            {/* <ViewerCount /> */}
+            <ViewerCount />
           </div>
           <div className="flex items-center gap-2">
             <button

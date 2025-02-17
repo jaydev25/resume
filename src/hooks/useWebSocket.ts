@@ -1,18 +1,16 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 
-const WS_URL = process.env.NODE_ENV === 'production'
-  ? 'wss://your-websocket-server.com' // You'll need to update this with your WebSocket server URL
-  : 'ws://localhost:3001';
+const WS_URL = 'ws://ec2-13-51-171-195.eu-north-1.compute.amazonaws.com:3001';
 
 interface WebSocketMessage {
-  type: 'message' | 'connection' | 'ping' | 'pong';
-  data?: string;
+  type: 'viewerCount' | 'ping' | 'pong';
+  count?: number;
   status?: string;
 }
 
 export const useWebSocket = () => {
   const [isConnected, setIsConnected] = useState(false);
-  const [messages, setMessages] = useState<string[]>([]);
+  const [viewerCount, setViewerCount] = useState(0);
   const wsRef = useRef<WebSocket | null>(null);
   const reconnectTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const pingIntervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -84,20 +82,14 @@ export const useWebSocket = () => {
             case 'pong':
               heartbeat();
               break;
-            case 'message':
-              if (data.data && typeof data.data === 'string') {
-                setMessages((prev) => [...prev, data.data as string]);
+            case 'viewerCount':
+              if (typeof data.count === 'number') {
+                setViewerCount(data.count);
               }
-              break;
-            case 'connection':
-              console.log('Connection status:', data.status);
               break;
           }
         } catch (error) {
           console.error('Error parsing message:', error);
-          if (typeof event.data === 'string') {
-            setMessages((prev) => [...prev, event.data]);
-          }
         }
       };
 
@@ -126,14 +118,6 @@ export const useWebSocket = () => {
     }
   }, [heartbeat]);
 
-  const sendMessage = useCallback((message: string) => {
-    if (wsRef.current?.readyState === WebSocket.OPEN) {
-      wsRef.current.send(JSON.stringify({ type: 'message', data: message }));
-    } else {
-      console.warn('WebSocket is not connected');
-    }
-  }, []);
-
   useEffect(() => {
     shouldAttemptReconnect.current = true;
     connect();
@@ -143,5 +127,5 @@ export const useWebSocket = () => {
     };
   }, [connect, cleanup]);
 
-  return { isConnected, messages, sendMessage };
+  return { isConnected, viewerCount };
 };
