@@ -4,7 +4,7 @@ const nextConfig = {
   basePath: '/resume',
   images: {
     unoptimized: true,
-  },
+  }
 }
 
 module.exports = nextConfig
