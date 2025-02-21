@@ -57,8 +57,8 @@ const skillCategories = {
 export default function Home() {
   const downloadPDF = () => {
     const link = document.createElement("a");
-    link.href = "/resume/resume_pdf.pdf";
-    link.download = "jaydev-thomke-resume.pdf";
+    link.href = "/resume/resume.pdf";
+    link.download = "Jaydev_Thomke_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -293,23 +293,20 @@ export default function Home() {
                       <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
                         <li>
                           Stack: ReactJS, Redux, Redux-sagas, Websockets
-                          (react-use-websocket), .Net
+                          (react-use-websocket), Nodejs
                         </li>
                         <li>Working on a product called Valve Link Pro</li>
                         <li>
-                          Current role is more of a Frontend where we consume
-                          .Net APIs to communicate with live devices
+                          Current role is more of a Frontend where we consume APIs to communicate with live devices
                         </li>
                       </ul>
-
                       <h5 className="font-semibold mt-2 text-gray-800 dark:text-white">
-                        ValveLink gen-z
+                        RTM (Tank Monitoring)
                       </h5>
                       <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
-                        <li>Stack: Nodejs, Electron, ReactJS</li>
+                        <li>Stack: Nodejs, Graphql, Nextjs/Reactjs, MSSQL</li>
                         <li>
-                          Building a backend/libraries using Nodejs to
-                          communicate with HART Modem using HART Protocol
+                          A multi-tenant system for real time tank monitoring.
                         </li>
                       </ul>
                     </div>
