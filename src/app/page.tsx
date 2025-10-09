@@ -9,7 +9,6 @@ import {
   FaGlobe
 } from "react-icons/fa";
 import ThemeToggle from "@/components/ThemeToggle";
-import ViewerCount from "@/components/ViewerCount";
 import { useRef } from "react";
 
 const skillCategories = {
