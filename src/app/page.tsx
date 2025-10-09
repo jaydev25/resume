@@ -14,7 +14,7 @@ import { useRef } from "react";
 const skillCategories = {
   "AI Tools": [
     "GitHub Copilot (Agentic Version)",
-    "Proven experience utilizing Agentic AI tools for software development to enhance productivity and overall code quality",
+    "ChatGPT",
   ],
   Frontend: [
     "React",
