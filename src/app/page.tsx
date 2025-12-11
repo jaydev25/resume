@@ -39,7 +39,7 @@ const skillCategories = {
     "NestJS",
   ],
   "Programming Languages": ["JavaScript", "TypeScript"],
-  Databases: ["MongoDB", "PostgreSQL", "MYSQL", "DynamoDB"],
+  Databases: ["MongoDB", "PostgreSQL", "MySQL", "DynamoDB"],
   "Cloud & DevOps": [
     "AWS",
     "S3",
@@ -53,7 +53,7 @@ const skillCategories = {
     "Jest",
     "React Testing Library",
     "Cypress",
-    "Playwright",
+  "Playwright",
     "Cucumber",
   ],
   "Project Management": [
@@ -238,7 +238,7 @@ export default function Home() {
                           <strong>ENBD X, Insurance</strong><br />
                           Stack: Nodejs, Typescript, Expressjs, MongoDB.<br />
                           Worked on product that allows end users to buy insurance using a mobile app.<br />
-                          Responsible for delivering REST APIS, that are consumed by mobile team.
+                          Responsible for delivering REST APIs, that are consumed by mobile team.
                         </li>
                         <li>
                           <strong>Wealth Connect Corporate Actions</strong><br />
@@ -262,7 +262,7 @@ export default function Home() {
                         </li>
                         <li>
                           <strong>RTM (Tank Monitoring)</strong><br />
-                          Stack: Nodejs, Graphql, Nextjs/Reactjs, MSSQL<br />
+                          Stack: Nodejs, GraphQL, Nextjs/Reactjs, MSSQL<br />
                           A multi-tenant system for real time tank monitoring.<br />
                           My role here was to review and improve backend architecture for this multi-tenant system.
                         </li>
@@ -284,7 +284,7 @@ export default function Home() {
                         <li>
                           <strong>RE: Instrument Monitoring System</strong><br />
                           Stack: React, NodeJS, MSSQL, MongoDB.<br />
-                          Successfully delivered a tool which is built using Electron (React/redux/sagas, Nodejs, Mongodb, MSSQL).<br />
+                          Successfully delivered a tool which is built using Electron (React/redux/sagas, Nodejs, MongoDB, MSSQL).<br />
                           Hosting: AWS EC2, S3 for storage, DynamoDB.<br />
                           My role here was to design, architect and develop a hybrid app using electron and backend using Node.js and Express.js
                         </li>
@@ -302,7 +302,7 @@ export default function Home() {
                           Working on a Business to Business (B2B) Project.<br />
                           Working on some major business driving features.<br />
                           Hosting: AWS EC2, S3 for storage, ElasticSearch, AWS lambda<br />
-                          This App was used by Frenchiees to order product in bulk<br />
+                          This App was used by Franchisees to order product in bulk<br />
                           Auto Replenishment System was a feature which helped Franchise owners to order fast selling products in their region.<br />
                           My role here was to design and develop features for  frontend and backend as per Merchandising Team and Business analysts.
                         </li>
