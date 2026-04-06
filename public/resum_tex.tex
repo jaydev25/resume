@@ -1,0 +1,189 @@
+%-------------------------
+% ATS-Friendly Resume - Jaydev Thomke
+% Optimized for Google Applications
+%-------------------------
+
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{newunicodechar}
+\newunicodechar{₹}{\textit{Rs.}}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage[margin=0.5in]{geometry}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Jaydev Thomke} \\ \vspace{2pt}
+    \small \faPhone\ +971-525-708-023 $|$ 
+    \href{mailto:jaydevthomke.dev@gmail.com}{\faEnvelope\ jaydevthomke.dev@gmail.com} $|$ 
+    \href{https://linkedin.com/in/jaydev-thomke-730924136}{\faLinkedin\ LinkedIn} $|$
+    \href{https://jaydev25.github.io/resume/}{\faGlobe\ Portfolio} \\
+    \small Dubai, United Arab Emirates
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Professional Summary}
+\small{Software Engineer with 8+ years of experience building scalable, distributed systems and microservices architectures. Expertise in full-stack development with React, Node.js, TypeScript, and cloud technologies. Proven track record of delivering high-impact features for enterprise applications, optimizing system performance, and leading technical initiatives. Strong background in real-time data processing with Kafka, WebSockets, and GraphQL. Passionate about solving complex problems at scale.}
+
+\vspace{4pt}
+\small{\textbf{Excellent experience in using Claude Code, its skills and plugins, to accelerate development workflows and boost productivity.}}
+
+%-----------AWARDS & RECOGNITION-----------
+\section{Awards \& Recognition}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     $\bullet$ \textbf{\href{https://www.linkedin.com/posts/activity-7278264293890940929-Wyra/}{Extra Mile Award -- Emerson}}{: Recognized as Best Performer for exceptional contributions to product development} \\
+     $\bullet$ \textbf{\href{https://www.linkedin.com/posts/activity-7378828158617157633-18Ze/}{Outstanding Skills Award -- Emirates NBD}}{: Awarded for excellence in LEAP IDE development} \\
+     $\bullet$ \textbf{\href{https://www.linkedin.com/posts/activity-7446961085615726592-HPTA/}{Outstanding Contribution Award -- Emirates NBD}}{: Recognized for contributions towards DX Engineering Practices 2026} \\
+    }}
+ \end{itemize}
+
+%-----------KEY ACHIEVEMENTS-----------
+\section{Key Achievements}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     $\bullet$ \textbf{Auto Replenishment System (FirstCry.com)}{: Engineered predictive ordering system analyzing sales patterns and inventory levels across 500+ franchise stores, automating procurement that processes ₹60-90 Lakh (\$75K-\$110K) in daily orders, generating ₹2-3 Crore (\$250K-\$370K) monthly revenue and eliminating manual ordering overhead} \\
+     $\bullet$ \textbf{Multi-Tenant Architecture Optimization (Emerson)}{: Redesigned backend architecture for RTM system, improving query performance by 50\% and enabling seamless data isolation for 100+ enterprise clients} \\
+     $\bullet$ \textbf{Real-Time Healthcare Platform (SPAK Engineering)}{: Built Telemed platform handling 10,000+ concurrent WebSocket connections for live doctor-patient consultations with HLS video streaming} \\
+     $\bullet$ \textbf{IoT Innovation (FirstCry.com)}{: Developed and deployed IoT-based customer feedback system using Node.js and Arduino across 200+ retail locations, capturing real-time customer sentiment data} \\
+    }}
+ \end{itemize}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: JavaScript, TypeScript, Python, SQL, HTML/CSS} \\
+     \textbf{Frontend}{: React.js, Next.js, Redux, Redux-Saga, Zustand, MobX, Angular, Electron, Tailwind CSS, AntD, MUI} \\
+     \textbf{Backend}{: Node.js, NestJS, Express.js, Restify, GraphQL, Microservices, RESTful APIs, WebSockets, Kafka} \\
+     \textbf{Databases}{: MongoDB, PostgreSQL, MySQL, MSSQL, DynamoDB, ElasticSearch} \\
+     \textbf{Cloud \& DevOps}{: AWS (EC2, S3, Lambda, DynamoDB), Docker, CI/CD, Multi-tenant Architecture} \\
+     \textbf{Tools \& Frameworks}{: Kafka, Git, GitHub Copilot, Claude Code, Socket.io, Redux-Toolkit, Arduino/IoT, Jira, Notion, Confluence} \\
+    }}
+ \end{itemize}
+
+
+%-----------EXPERIENCE-----------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer}{May 2025 -- Present}
+      {Emirates NBD}{Dubai, UAE}
+      \resumeItemListStart
+        \resumeItem{Architected and developed RESTful microservices using Node.js, TypeScript, and Express.js for ENBD X insurance platform, enabling mobile users to purchase insurance products seamlessly}
+        \resumeItem{Built Wealth Connect Corporate Actions web application from scratch using React.js, Node.js, and MongoDB, empowering wealth advisors to manage client portfolios, send bulk notifications, and handle consents}
+        \resumeItem{Leveraged GitHub Copilot in agentic mode to accelerate development cycles by 40\%, implementing best practices for scalable, maintainable code architecture}
+        \resumeItem{Designed MongoDB schemas optimized for high-throughput operations, ensuring sub-100ms API response times}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Development Engineer III}{March 2025 -- May 2025}
+      {OpenGov Inc.}{Pune, India}
+      \resumeItemListStart
+        \resumeItem{Contributed to government technology solutions, focusing on civic engagement and transparency platforms}
+        \resumeItem{Collaborated with cross-functional teams to deliver high-quality software solutions for public sector clients}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Senior Software Engineer}{April 2022 -- April 2025}
+      {Emerson Automation Solutions}{Pune, India}
+      \resumeItemListStart
+        \resumeItem{Developed ValveLink Pro frontend using React.js, Redux-Saga, and WebSockets, enabling real-time communication with industrial valve devices and reducing latency by 35\%}
+        \resumeItem{Redesigned backend architecture for RTM Tank Monitoring system, implementing GraphQL APIs and optimizing multi-tenant data isolation, improving query performance by 50\%}
+        \resumeItem{Led code reviews and established architectural patterns for scalable, multi-tenant SaaS applications serving 100+ enterprise clients}
+        \resumeItem{Integrated real-time monitoring dashboards using Next.js and MSSQL, providing actionable insights for industrial operations}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Full Stack Developer}{June 2020 -- March 2022}
+      {SPAK Engineering}{Bangalore, India}
+      \resumeItemListStart
+        \resumeItem{Built Telemed healthcare platform using React, Node.js, and WebSockets, facilitating real-time doctor-patient consultations with HLS video streaming and live chat for chronic disease management}
+        \resumeItem{Architected and developed RE Instrument Monitoring System as hybrid Electron app, deployed on AWS (EC2, S3, DynamoDB) with offline-first capabilities for field engineers}
+        \resumeItem{Designed RESTful and WebSocket APIs handling 10,000+ concurrent connections, ensuring HIPAA-compliant data handling}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {MEAN Stack Developer}{November 2017 -- June 2020}
+      {FirstCry.com (BrainBees Solutions Pvt. Ltd.)}{Pune, India}
+      \resumeItemListStart
+        \resumeItem{Developed B2B e-commerce platform using Angular, Node.js (Restify), and PostgreSQL, processing \$50M+ in annual transactions for 500+ franchise partners}
+        \resumeItem{Engineered Auto Replenishment System using machine learning algorithms to predict inventory needs, reducing stockouts by 30\% and optimizing supply chain efficiency}
+        \resumeItem{Built IoT-based Feedback Kiosk using Node.js and Arduino (ESP32), deployed across 200+ retail locations to capture real-time customer sentiment}
+        \resumeItem{Implemented AWS infrastructure (EC2, S3, Lambda, ElasticSearch) supporting 1M+ daily active users with 99.9\% uptime}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Bachelor of Engineering (Computer Science)}{2014 -- 2017}
+{Shivaji University}{Miraj, India}
+
+\resumeSubheading
+{Diploma}{2011 -- 2014}
+{MSBTE}{Jaysingpur, India}
+
+\resumeSubheading
+{SSC}{2009}
+{Shivaji University}{Sangli, India}
+
+\resumeSubHeadingListEnd
+\end{document}
