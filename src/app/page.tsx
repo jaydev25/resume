@@ -14,6 +14,7 @@ import ViewerCount from "@/components/ViewerCount";
 
 const skillCategories = {
   "AI Tools": [
+    "Claude Code",
     "GitHub Copilot (Agentic Version)",
     "ChatGPT",
   ],
@@ -53,12 +54,13 @@ const skillCategories = {
     "Jest",
     "React Testing Library",
     "Cypress",
-  "Playwright",
+    "Playwright",
     "Cucumber",
   ],
   "Project Management": [
     "Git",
     "Jira",
+    "Confluence",
     "Trello",
     "TFS",
     "CodeBeamer",
@@ -156,9 +158,9 @@ export default function Home() {
           </div>
 
           <div style={{ display: "flex", flexDirection: "row" }}>
-            <div style={{ flex: "3", padding: "20px"}}>
+            <div style={{ flex: "3", padding: "20px" }}>
               <div style={{ display: "flex", flexDirection: "row" }}>
-                <div style={{ flex: "3", padding: "20px"}}>
+                <div style={{ flex: "3", padding: "20px" }}>
                   {/* Summary Section */}
                   <section className="mb-8">
                     <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4 border-b-2 border-blue-600 pb-2">
